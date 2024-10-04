@@ -1,5 +1,5 @@
 # Reference: <https://postmarketos.org/vendorkernel>
-# Kernel config based on: arch/arm64/configs/(CHANGEME!)
+# Kernel config based on arch/arm64/configs/(CHANGEME!)
 
 pkgname=linux-xiaomi-selene
 pkgver=4.14.186
