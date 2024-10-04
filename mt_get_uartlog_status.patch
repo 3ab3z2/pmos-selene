@@ -1,0 +1,25 @@
+diff --git a/drivers/misc/mediatek/include/mt-plat/mtk_printk_ctrl.h b/drivers/misc/mediatek/include/mt-plat/mtk_printk_ctrl.h
+index 45e867650..427765f45 100644
+--- a/drivers/misc/mediatek/include/mt-plat/mtk_printk_ctrl.h
++++ b/drivers/misc/mediatek/include/mt-plat/mtk_printk_ctrl.h
+@@ -14,7 +14,7 @@ bool mt_get_uartlog_status(void);
+ void mt_disable_uart(void);
+ void mt_enable_uart(void);
+ #else
+-static inline bool mt_get_uartlog_status(void)
++inline bool mt_get_uartlog_status(void)
+ {
+ 	return false;
+ }
+diff --git a/include/linux/printk.h b/include/linux/printk.h
+index b003c3c43..64b18ce42 100644
+--- a/include/linux/printk.h
++++ b/include/linux/printk.h
+@@ -15,7 +15,6 @@ extern const char linux_proc_banner[];
+ 
+ extern char *log_buf_addr_get(void);
+ extern u32 log_buf_len_get(void);
+-extern bool mt_get_uartlog_status(void);
+ 
+ #ifdef CONFIG_MTK_AEE_FEATURE
+ extern void aee_wdt_zap_locks(void);
