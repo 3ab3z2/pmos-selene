@@ -1,0 +1,12 @@
+diff --git a/arch/arm64/include/asm/uaccess.h b/arch/arm64/include/asm/uaccess.h
+index d24dcbc876b9..39f3397f8efd 100644
+--- a/arch/arm64/include/asm/uaccess.h
++++ b/arch/arm64/include/asm/uaccess.h
+@@ -28,6 +28,7 @@
+ #include <linux/bitops.h>
+ #include <linux/kasan-checks.h>
+ #include <linux/string.h>
++#include <linux/sched.h>
+ 
+ #include <asm/cpufeature.h>
+ #include <asm/ptrace.h>

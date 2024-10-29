@@ -1,0 +1,13 @@
+diff --git a/scripts/Makefile.lib b/scripts/Makefile.lib
+index 5b8654a215e7..9f481a41828c 100644
+--- a/scripts/Makefile.lib
++++ b/scripts/Makefile.lib
+@@ -331,7 +331,7 @@ dtc-tmp = $(subst $(comma),_,$(dot-target).dts.tmp)
+ # mkdtimg
+ #----------------------------------------------------------------------------
+ quiet_cmd_mkdtimg = DTBOIMG $@
+-cmd_mkdtimg = python2 $(srctree)/scripts/dtc/libfdt/mkdtboimg.py create $@ --page_size=4096 $(filter-out FORCE,$^)
++cmd_mkdtimg = mkdtboimg create $@ --page_size=4096 $(filter-out FORCE,$^)
+ 
+ # cat
+ # ---------------------------------------------------------------------------
